@@ -17,8 +17,8 @@ const Header = () => {
                 <li>Compétences</li>
                 <li>Projets</li>
                 <li>Contact</li>
-                <FaLinkedin width={100} height={100}/>
-                <FaGithub width={50} height={50}/>
+                <FaLinkedin />
+                <FaGithub />
             </ul>
         </div>
     </div>

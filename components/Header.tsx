@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <div className='flex justify-between bg-black text-white text-lg p-2'>
+    <header className='flex justify-between bg-black text-white text-lg p-2'>
         <div>
             {/* <Image src="/image/Photo_de_profil_Jean-Jacques_Valmont.jpg" alt="Photo_de_profil_Jean-Jacques_Valmont" width={50} height={50}/> */}
         </div>
@@ -21,7 +21,7 @@ const Header = () => {
                 <FaGithub />
             </ul>
         </div>
-    </div>
+    </header>
     
   )
 }

@@ -17,8 +17,8 @@ const Header = () => {
                 <li>Compétences</li>
                 <li>Projets</li>
                 <li>Contact</li>
-                <FaLinkedin />
-                <FaGithub />
+                <FaLinkedin className='text-2xl'/>
+                <FaGithub className='text-2xl'/>
             </ul>
         </div>
     </header>

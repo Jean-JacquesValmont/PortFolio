@@ -32,8 +32,8 @@ const CardProject = (props: any) => {
             </div>
         </CardContent>
         <CardFooter className='py-4'>
-            <Button className='mx-2' variant="outline">En savoir plus</Button>
-            <Button variant="outline">Site web</Button>
+            <Button className='mx-2 hover:bg-black hover:text-white' variant="outline">En savoir plus</Button>
+            <Button className="hover:bg-black hover:text-white" variant="outline">Site web</Button>
         </CardFooter>
     </Card>
   )

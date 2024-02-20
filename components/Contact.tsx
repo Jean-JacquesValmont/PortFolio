@@ -8,7 +8,7 @@ import { Textarea } from './ui/textarea';
 
 const Contact = () => {
   return (
-    <div>
+    <div id="contact">
       <h2 className="text-6xl pb-4 text-center">Contact</h2>
       <div className='flex justify-center pb-4'>
         <FaMessage className='text-4xl'/>

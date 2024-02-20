@@ -11,6 +11,7 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
+import DrawerPage from './DrawerPage'
 
 const CardProject = (props: any) => {
 
@@ -32,8 +33,8 @@ const CardProject = (props: any) => {
             </div>
         </CardContent>
         <CardFooter className='py-4'>
-            <Button className='mx-2 hover:bg-black hover:text-white' variant="outline">En savoir plus</Button>
-            <Button className="hover:bg-black hover:text-white" variant="outline">Site web</Button>
+            <DrawerPage />
+            <a href={props.item.link} target="_blank" rel="noopener noreferrer"><Button className="hover:bg-black hover:text-white" variant="outline">Site web</Button></a>
         </CardFooter>
     </Card>
   )

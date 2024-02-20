@@ -20,7 +20,7 @@ const CardProject = (props: any) => {
         </Badge>
     ));
   return (
-    <Card className="w-[300px] flex flex-col items-center">
+    <Card className="w-[300px] flex flex-col items-center hover:scale-105 transition-transform">
         <CardHeader className='w-full border-b-2 border-black flex items-center p-0'>
             <Image src={props.item.image} alt={props.item.alt} width={500} height={500}/> 
         </CardHeader>

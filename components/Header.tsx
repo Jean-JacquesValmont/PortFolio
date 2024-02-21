@@ -24,14 +24,14 @@ const Header = () => {
       </div>
 
       <nav onClick={toggleMenu} className={`sm:flex sm:items-center ${isMenuOpen ? 'block' : 'hidden'}`}>
-        <ul className="flex flex-col gap-4 items-center sm:flex-row" >
-          <li><a href="#hero">Accueil</a></li>
-          <li><a href="#about">Présentation</a></li>
-          <li><a href="#skill">Compétences</a></li>
-          <li><a href="#project">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <a href="https://www.linkedin.com/in/jean-jacques-valmont-131630130/" target="_blank" rel="noopener noreferrer"><FaLinkedin className='text-2xl' /></a>
-          <a href="https://github.com/Jean-JacquesValmont" target="_blank" rel="noopener noreferrer"><FaGithub className='text-2xl' /></a>
+        <ul className="flex flex-col gap-4 items-center sm:flex-row " >
+          <li><a className='hover:text-yellow-300' href="#hero">Accueil</a></li>
+          <li><a className='hover:text-yellow-300' href="#about">Présentation</a></li>
+          <li><a className='hover:text-yellow-300' href="#skill">Compétences</a></li>
+          <li><a className='hover:text-yellow-300' href="#project">Projets</a></li>
+          <li><a className='hover:text-yellow-300' href="#contact">Contact</a></li>
+          <a href="https://www.linkedin.com/in/jean-jacques-valmont-131630130/" target="_blank" rel="noopener noreferrer"><FaLinkedin className='text-2xl hover:text-yellow-300' /></a>
+          <a href="https://github.com/Jean-JacquesValmont" target="_blank" rel="noopener noreferrer"><FaGithub className='text-2xl hover:text-yellow-300' /></a>
         </ul>
       </nav>
     </header>

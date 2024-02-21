@@ -18,7 +18,9 @@ const ContactBand = () => {
         </div>
         <div className='flex flex-col items-center py-2 sm:px-2'>
             <FaLinkedin className='text-4xl'/>
-            <a href="https://www.linkedin.com/in/jean-jacques-valmont-131630130/" target="_blank" rel="noopener noreferrer"><p>Par Linkedin</p></a>
+            <a href="https://www.linkedin.com/in/jean-jacques-valmont-131630130/" target="_blank" rel="noopener noreferrer">
+              <p className='hover:text-blue-800'>Par Linkedin</p>
+            </a>
         </div>
       </div>
   )

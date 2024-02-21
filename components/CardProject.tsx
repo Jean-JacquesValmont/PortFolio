@@ -34,7 +34,9 @@ const CardProject = (props: any) => {
         </CardContent>
         <CardFooter className='py-4'>
             <DrawerPage />
-            <a href={props.item.link} target="_blank" rel="noopener noreferrer"><Button className="hover:bg-black hover:text-white" variant="outline">Site web</Button></a>
+            <a href={props.item.link} target="_blank" rel="noopener noreferrer">
+                <Button className="hover:bg-black hover:text-white" variant="outline">Site web</Button>
+            </a>
         </CardFooter>
     </Card>
   )

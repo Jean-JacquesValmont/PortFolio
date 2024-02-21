@@ -13,7 +13,7 @@ export default [
 
     {
         title: "JavaScript",
-        image: "/image/JavaScript_logo.png",
+        image: "/image/Javascript_logo.png",
         alt: "logo JavaScript"
     },
 

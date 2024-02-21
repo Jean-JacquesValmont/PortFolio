@@ -29,7 +29,7 @@ export default [
             {techno: "Shadcn/ui"},
             {techno: "Vercel"},
         ],
-        vercel:"https://http://localhost:3000/",
+        vercel:"https://port-folio-three-umber.vercel.app/",
         github:"https://github.com/Jean-JacquesValmont/PortFolio",
         text:"Le but était de créer un site web professionnel avec une interface utilisateur/ expérience utilisateur (UI/UX) simple, responsive et accessible en utilisant la librairie shadcn/ui et Tailwind CSS.",
     },

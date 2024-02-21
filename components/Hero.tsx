@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
     setIsVisible(true);

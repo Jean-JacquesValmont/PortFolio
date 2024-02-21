@@ -12,11 +12,30 @@ import {
     DrawerTrigger,
   } from "@/components/ui/drawer"
 import { Badge } from './ui/badge'
-  
 
-const DrawerPage = (props : any) => {
+type TechnologyItem = {
+    techno : string
+}
 
-    const badges = props.item.technology.map((element : any) => (
+type DrawerItem = {
+    title: string
+    image: string
+    alt: string
+    summarise: string
+    technology: TechnologyItem[]
+    vercel: string
+    github: string
+    text: string
+}
+
+type DrawerPageProps = {
+    key: string | number
+    item: DrawerItem
+}
+
+const DrawerPage = (props : DrawerPageProps) => {
+
+    const badges = props.item.technology.map((element : TechnologyItem) => (
         <Badge key={element.techno} variant="outline">
             {element.techno}
         </Badge>

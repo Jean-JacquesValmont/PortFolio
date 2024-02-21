@@ -5,7 +5,7 @@ import CardProject from './CardProject';
 const Projects = () => {
 
   const cardProject = dataProject.map(item => {
-    return ( <CardProject key={item.title} item={item}/>)
+    return (<CardProject key={item.title} item={item}/>)
   });
 
 

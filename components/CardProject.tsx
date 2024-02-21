@@ -14,9 +14,29 @@ import {
   } from "@/components/ui/card"
 import DrawerPage from './DrawerPage'
 
-const CardProject = (props: any) => {
+type TechnologyItem = {
+    techno : string
+}
 
-    const badges = props.item.technology.map((element : any) => (
+type ProjectItem = {
+    title: string
+    image: string
+    alt: string
+    summarise: string
+    technology: TechnologyItem[]
+    vercel: string
+    github: string
+    text: string
+}
+
+type CardProjectProps = {
+    key: string | number
+    item: ProjectItem
+}
+
+const CardProject = (props: CardProjectProps) => {
+
+    const badges = props.item.technology.map((element : TechnologyItem) => (
         <Badge key={element.techno} variant="outline">
             {element.techno}
         </Badge>
@@ -33,7 +53,7 @@ const CardProject = (props: any) => {
             <div>{badges}</div>
         </CardContent>
         <CardFooter className='py-4'>
-            <DrawerPage item={props.item}/>
+            <DrawerPage key={props.item.title} item={props.item}/>
             <a href={props.item.vercel} target="_blank" rel="noopener noreferrer">
                 <Button className="hover:bg-black hover:text-white" variant="outline">Site web</Button>
             </a>

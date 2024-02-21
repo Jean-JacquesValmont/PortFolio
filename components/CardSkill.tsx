@@ -6,8 +6,19 @@ import {
   CardContent,
   CardTitle,
 } from "@/components/ui/card"
- 
-export function CardSkill(props: any) {
+
+type SkillItem = {
+  title: string
+  image: string
+  alt: string
+}
+
+type CardSkillProps ={
+  key: string | number
+  item: SkillItem
+}
+
+export function CardSkill(props: CardSkillProps) {
   return (
     <Card className="w-[150px]">
       <CardContent className="flex flex-col justify-center items-center">

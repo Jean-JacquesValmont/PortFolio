@@ -5,7 +5,7 @@ import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 
 const Header = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);

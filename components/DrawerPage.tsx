@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import {
     Drawer,
@@ -10,21 +11,31 @@ import {
     DrawerTitle,
     DrawerTrigger,
   } from "@/components/ui/drawer"
+import { Badge } from './ui/badge'
   
 
-const DrawerPage = () => {
+const DrawerPage = (props : any) => {
+
+    const badges = props.item.technology.map((element : any) => (
+        <Badge key={element.techno} variant="outline">
+            {element.techno}
+        </Badge>
+    ));
+
   return (
     <Drawer>
         <DrawerTrigger className='border rounded-lg p-2 mx-2 text-sm hover:bg-black hover:text-white'>En savoir plus</DrawerTrigger>
         <DrawerContent>
-            <DrawerHeader>
-                <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-                <DrawerDescription>This action cannot be undone.</DrawerDescription>
+            <DrawerHeader className='flex flex-col justify-center items-center'>
+                <DrawerTitle className='text-6xl'>{props.item.title}</DrawerTitle>
+                <Image className='mb-2 border-2 border-black' src={props.item.image} alt={props.item.alt} width={1000} height={1000}/>
+                <div>{badges}</div>
+                <h2 className='text-2xl py-2'>Objectif</h2>
+                <DrawerDescription className='w-full sm:w-[50rem] text-center'>{props.item.text}</DrawerDescription>
             </DrawerHeader>
             <DrawerFooter>
-                <Button>Submit</Button>
                 <DrawerClose>
-                    <Button className='mx-2 hover:bg-black hover:text-white' variant="outline">Cancel</Button>
+                    <Button className='mx-2 hover:bg-black hover:text-white' variant="outline">Fermer la page</Button>
                 </DrawerClose>
             </DrawerFooter>
         </DrawerContent>

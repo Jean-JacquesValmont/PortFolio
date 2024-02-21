@@ -27,7 +27,7 @@ const CardProject = (props: any) => {
         </CardHeader>
         <CardContent className="flex flex-col items-center">
             <CardTitle className='text-4xl pb-4'>{props.item.title}</CardTitle>
-            <CardDescription className='text-md pb-4'>{props.item.text}</CardDescription>
+            <CardDescription className='text-md pb-4 text-center'>{props.item.text}</CardDescription>
             <div>
                 {badges}
             </div>

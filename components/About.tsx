@@ -5,7 +5,7 @@ import AccordionAbout from './AccordionAbout'
 const About = () => {
   return (
     <div id="about" className='flex flex-col items-center justify-center py-2'>
-        <h2 className='text-6xl pb-4'>Présentation</h2>
+        <h2 className='text-6xl pb-4'>A propos de moi</h2>
         <div className='w-full flex flex-col lg:flex-row items-center'>
             <div className='w-1/2 flex justify-end md:justify-center'>
                 <Image src="/image/Photo_de_profil_Jean-Jacques_Valmont.jpg" alt="Photo_de_profil_Jean-Jacques_Valmont" width={400} height={400}/>  

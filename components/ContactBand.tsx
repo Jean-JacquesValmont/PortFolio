@@ -5,22 +5,21 @@ import { FaLinkedin } from "react-icons/fa";
 
 const ContactBand = () => {
   return (
-    <div className='flex flex-col sm:flex-row justify-center items-center pb-4'>
+    <div className='flex flex-row justify-center items-center pb-16 gap-32'>
         <div className='flex flex-col items-center py-2 sm:px-2'>
-          <FaPhoneAlt className='text-4xl'/>
-          <p>Par téléphone</p>
-          <p>07 88 63 32 03</p>
+          <a href="tel:0788333203" target="_blank" rel="noopener noreferrer">
+            <FaPhoneAlt className='text-4xl hover:text-blue-800'/>
+          </a>
         </div>
         <div className='flex flex-col items-center py-2 sm:px-2'>
-          <IoMailSharp className='text-4xl'/>
-          <p>Par mail</p>
-          <p>jeanjacquesvalmont@gmail.com</p>
+          <a href="mailto:jeanjacquesvalmont@gmail.com" target="_blank" rel="noopener noreferrer">
+            <IoMailSharp className='text-4xl hover:text-blue-800'/>
+          </a>
         </div>
         <div className='flex flex-col items-center py-2 sm:px-2'>
-            <FaLinkedin className='text-4xl'/>
-            <a href="https://www.linkedin.com/in/jean-jacques-valmont-131630130/" target="_blank" rel="noopener noreferrer">
-              <p className='hover:text-blue-800'>Par Linkedin</p>
-            </a>
+          <a href="https://www.linkedin.com/in/jean-jacques-valmont-131630130/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className='text-4xl hover:text-blue-800'/>
+          </a>
         </div>
       </div>
   )

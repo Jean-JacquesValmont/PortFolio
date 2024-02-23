@@ -15,7 +15,7 @@ const FormMessage = () => {
 
   return (
     <form action="https://formsubmit.co/bc4bbd2b00c779c8ea12f752a8e1a2fb"  method="POST">
-        <div className='flex flex-col items-center justify-center pb-4'>
+        <div className='flex flex-col items-center justify-center pb-4 hidden'>
             <div className='flex w-full sm:w-[33rem]'>
                 <div className='w-full sm:w-[33rem] pb-4 px-2'>
                     <p>Prénom*</p>

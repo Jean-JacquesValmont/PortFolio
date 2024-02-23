@@ -11,7 +11,7 @@ const Projects = () => {
 
   return (
     <div id="project" className="flex flex-col items-center justify-center p-4">
-      <h2 className="text-6xl pb-4 text-center">Projets</h2>
+      <h2 className="text-6xl pb-4 mt-16 mb-16 text-center">Projets</h2>
       <div className="flex flex-col lg:flex-row gap-10">
         {cardProject}
       </div>

@@ -47,8 +47,8 @@ const CardProject = (props: CardProjectProps) => {
         <CardHeader className='w-full border-b-2 border-black flex items-center p-0'>
             <Image src={props.item.image} alt={props.item.alt} width={500} height={500}/> 
         </CardHeader>
-        <CardContent className="flex flex-col items-center">
-            <CardTitle className='text-4xl pb-4'>{props.item.title}</CardTitle>
+        <CardContent className="flex flex-col items-center justify-center">
+            <CardTitle className='text-2xl pb-4 md:text-4xl'>{props.item.title}</CardTitle>
             <CardDescription className='text-md pb-4 text-center'>{props.item.summarise}</CardDescription>
             <div>{badges}</div>
         </CardContent>

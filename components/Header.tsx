@@ -1,29 +1,14 @@
 "use client"
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 
 const Header = () => {
-  const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
 
   return (
-    <header className='flex justify-center bg-black text-white text-lg p-2 sm:justify-between'>
-      <div>
-        {/* <Image src="/image/Photo_de_profil_Jean-Jacques_Valmont.jpg" alt="Photo_de_profil_Jean-Jacques_Valmont" width={50} height={50}/> */}
-      </div>
+    <header className='flex justify-center bg-black text-white text-lg p-4 sm:justify-end'>
 
-      <div className='sm:hidden'>
-        <button onClick={toggleMenu} className='text-2xl'>
-          ☰
-        </button>
-      </div>
-
-      <nav onClick={toggleMenu} className={`sm:flex sm:items-center ${isMenuOpen ? 'block' : 'hidden'}`}>
+      <nav className='hidden sm:flex sm:items-center sm:block'>
         <ul className="flex flex-col gap-4 items-center sm:flex-row " >
           <li><a className='hover:text-yellow-300' href="#hero">Accueil</a></li>
           <li><a className='hover:text-yellow-300' href="#about">Présentation</a></li>

@@ -43,7 +43,7 @@ const CardProject = (props: CardProjectProps) => {
     ));
     
   return (
-    <Card className="w-[330px] flex flex-col items-center hover:scale-105 transition-transform">
+    <Card className="w-[250px] sm:w-[330px] flex flex-col items-center hover:scale-105 transition-transform">
         <CardHeader className='w-full border-b-2 border-black flex items-center p-0'>
             <Image src={props.item.image} alt={props.item.alt} width={500} height={500}/> 
         </CardHeader>

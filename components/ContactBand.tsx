@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const ContactBand = () => {
   return (
-    <div className='flex flex-row justify-center items-center pb-16 gap-32'>
+    <div className='flex flex-row justify-center items-center pb-16 gap-16 sm:gap-32'>
         <div className='flex flex-col items-center py-2 sm:px-2'>
           <a href="tel:0788333203" target="_blank" rel="noopener noreferrer">
             <FaPhoneAlt className='text-4xl hover:text-blue-800'/>

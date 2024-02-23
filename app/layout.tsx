@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Goldman } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const goldman = Goldman({ subsets: ["latin"], weight:"400"});
+const openSans = Open_Sans({ subsets: ["latin"]});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={goldman.className}>
+      <body className={openSans.className}>
         <Header />
         {children}
         <Footer />

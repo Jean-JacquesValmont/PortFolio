@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { FaGithub } from 'react-icons/fa';
 
@@ -13,6 +14,7 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 import DrawerPage from './DrawerPage'
+import ModalPage from './ModalPage';
 
 type TechnologyItem = {
     techno : string
@@ -35,6 +37,15 @@ type CardProjectProps = {
 }
 
 const CardProject = (props: CardProjectProps) => {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const openModal = () => {
+        setModalIsOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalIsOpen(false);
+    };
 
     const badges = props.item.technology.map((element : TechnologyItem) => (
         <Badge key={element.techno} variant="outline">
@@ -43,7 +54,7 @@ const CardProject = (props: CardProjectProps) => {
     ));
     
   return (
-    <Card className="w-[250px] sm:w-[330px] flex flex-col items-center hover:scale-105 transition-transform">
+    <Card className={`w-[250px] sm:w-[330px] flex flex-col items-center ${modalIsOpen ? "" : "hover:scale-105 transition-transform"}`}>
         <CardHeader className='w-full border-b-2 border-black flex items-center p-0'>
             <Image src={props.item.image} alt={props.item.alt} width={500} height={500}/> 
         </CardHeader>
@@ -52,7 +63,11 @@ const CardProject = (props: CardProjectProps) => {
             <CardDescription className='text-md pb-4 text-center'>{props.item.summarise}</CardDescription>
             <div>{badges}</div>
         </CardContent>
-        <CardFooter className='py-4'>
+        <CardFooter className='flex justify-between py-4'>
+            <Button className="hover:bg-black hover:text-white mx-2 hidden md:block" variant="outline" onClick={openModal}>
+                En savoir plus
+            </Button>
+            <ModalPage isOpen={modalIsOpen} closeModal={closeModal} content="Contenu de la modale" />
             <DrawerPage key={props.item.title} item={props.item}/>
             <a href={props.item.vercel} target="_blank" rel="noopener noreferrer">
                 <Button className="hover:bg-black hover:text-white" variant="outline">Site web</Button>

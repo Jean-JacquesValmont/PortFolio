@@ -43,7 +43,7 @@ const DrawerPage = (props : DrawerPageProps) => {
 
   return (
     <Drawer>
-        <DrawerTrigger className='border rounded-lg p-2 mx-2 text-sm hover:bg-black hover:text-white'>En savoir plus</DrawerTrigger>
+        <DrawerTrigger className='border rounded-lg p-2 mx-2 text-sm hover:bg-black hover:text-white md:hidden'>En savoir plus</DrawerTrigger>
         <DrawerContent>
             <DrawerHeader className='flex flex-col justify-center items-center'>
                 <DrawerTitle className='text-6xl'>{props.item.title}</DrawerTitle>

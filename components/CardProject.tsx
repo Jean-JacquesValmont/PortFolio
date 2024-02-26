@@ -67,7 +67,7 @@ const CardProject = (props: CardProjectProps) => {
             <Button className="hover:bg-black hover:text-white mx-2 hidden md:block" variant="outline" onClick={openModal}>
                 En savoir plus
             </Button>
-            <ModalPage isOpen={modalIsOpen} closeModal={closeModal} content="Contenu de la modale" />
+            <ModalPage key={props.item.title} isOpen={modalIsOpen} closeModal={closeModal} item={props.item} />
             <DrawerPage key={props.item.title} item={props.item}/>
             <a href={props.item.vercel} target="_blank" rel="noopener noreferrer">
                 <Button className="hover:bg-black hover:text-white" variant="outline">Site web</Button>

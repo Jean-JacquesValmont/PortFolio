@@ -42,7 +42,7 @@ const ModalPage = ({ isOpen, closeModal, item } : CardProjectProps)  => {
             <h2 className='text-2xl py-8'>Objectif</h2>
             <p className='w-full sm:w-[50rem] text-center'>{item.text}</p>
             <Button className="mt-8 mb-2 hover:bg-black hover:text-white" variant="outline" onClick={closeModal}>
-              Fermer la modale
+                Fermer la page
             </Button>
           </div>
         </div>

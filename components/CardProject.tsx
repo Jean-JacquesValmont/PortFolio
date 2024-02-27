@@ -20,6 +20,14 @@ type TechnologyItem = {
     techno : string
 }
 
+type ChallengeItem = {
+    challenge : string
+}
+
+type ResolutionItem = {
+    resolution : string
+}
+
 type ProjectItem = {
     title: string
     image: string
@@ -29,6 +37,8 @@ type ProjectItem = {
     vercel: string
     github: string
     text: string
+    challenge: ChallengeItem[]
+    resolution: ResolutionItem[]
 }
 
 type CardProjectProps = {

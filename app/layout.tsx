@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   creator: 'Jean-Jacques Valmont',
   openGraph: {
     type: 'website',
-    url: 'https://port-folio-three-umber.vercel.app/', // Mettez l'URL de votre site ici
+    url: 'https://port-folio-three-umber.vercel.app/',
     title: 'Portfolio Jean-Jacques Valmont',
     description: 'Portfolio de Jean-Jacques Valmont. Développeur front-end React en recherche d\'alternance pour mars 2024 sur Paris',
     images: [
       {
-        url: "/image/Portfolio_Jean-Jacques_Valmont.png", // Mettez l'URL de votre image Open Graph ici
+        url: "/image/Portfolio_Jean-Jacques_Valmont.png",
         width: 1200,
         height: 630,
         alt: "Image d'une partie du portfolio",

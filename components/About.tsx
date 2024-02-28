@@ -30,7 +30,7 @@ const About = () => {
                   JavaScript qui a suscité le plus mon intérêt. Par la suite, j&apos;ai exploré 
                   React et NextJS, plateformes sur lesquelles je continue à développer mes 
                   compétences. Parallèlement, en tant que passionné de jeu d&apos;échecs et de création,
-                  je me suis lancé dans la création d&apos;un jeu d&apos;échecs multijoueur. 
+                  je me suis lancé dans la création d&apos;un jeu d&apos;échecs multijoueurs. 
                    Mon objectif est de poursuivre ma formation et de contribuer à des projets stimulants.
                 </p>
               </div>

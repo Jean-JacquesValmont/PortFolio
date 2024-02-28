@@ -20,10 +20,10 @@ type CardSkillProps ={
 
 export function CardSkill(props: CardSkillProps) {
   return (
-    <Card className="w-[75px] md:w-[150px]">
+    <Card className="w-[auto] md:w-[150px]">
       <CardContent className="flex flex-col justify-center items-center">
         <Image src={props.item.image} alt={props.item.alt} width={300} height={300}/>
-        <CardTitle className="pt-2 text-sm md:text-xl">{props.item.title}</CardTitle>
+        <CardTitle className="pt-2 text-xs md:text-xl">{props.item.title}</CardTitle>
       </CardContent>
     </Card>
   )

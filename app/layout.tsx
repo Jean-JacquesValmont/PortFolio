@@ -4,6 +4,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Head from 'next/head';
 
 const goldman = Goldman({ subsets: ["latin"], weight:"400"});
 const openSans = Open_Sans({ subsets: ["latin"]});
@@ -22,6 +23,10 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={openSans.className}>
+        <Head>
+          <title>Portfolio Jean-Jacques Valmont</title>
+          <meta name="description" content="Portfolio de Jean-Jacques Valmont. Développeur front-end en recherche d'alternance pour mars 2024 sur Paris."></meta>
+        </Head>
         <Header />
         {children}
         <Footer />

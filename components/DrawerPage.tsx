@@ -11,7 +11,7 @@ import {
     DrawerTitle,
     DrawerTrigger,
   } from "@/components/ui/drawer"
-import { Badge } from './ui/badge'
+import UseBadge from '@/custom/UseBadge'
 
 type TechnologyItem = {
     techno : string
@@ -45,12 +45,6 @@ type DrawerPageProps = {
 
 const DrawerPage = (props : DrawerPageProps) => {
 
-    const badges = props.item.technology.map((element : TechnologyItem) => (
-        <Badge key={element.techno} variant="outline">
-            {element.techno}
-        </Badge>
-    ));
-
     const challenges = props.item.challenge.map((element : ChallengeItem) => (
         <li key={element.challenge}>{element.challenge}</li>
     ));
@@ -66,7 +60,7 @@ const DrawerPage = (props : DrawerPageProps) => {
             <DrawerHeader className='flex flex-col justify-center items-center'>
                 <DrawerTitle className='text-6xl'>{props.item.title}</DrawerTitle>
                 <Image className='mb-2 border-2 border-black' src={props.item.image} alt={props.item.alt} width={1000} height={1000}/>
-                <div>{badges}</div>
+                <UseBadge technologies={props.item.technology}/>
                 <h2 className='text-2xl py-2'>Objectif</h2>
                 <DrawerDescription className='w-full sm:w-[50rem] text-center'>{props.item.text}</DrawerDescription>
                 <h2 className='text-2xl py-2'>Les difficultées rencontrées</h2>

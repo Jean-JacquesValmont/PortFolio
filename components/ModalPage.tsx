@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useEffect } from 'react'
 import { Button } from './ui/button'
-import { Badge } from './ui/badge'
+import UseBadge from '@/custom/UseBadge'
 
 type TechnologyItem = {
     techno : string
@@ -37,12 +37,6 @@ type CardProjectProps = {
 
 const ModalPage = ({ isOpen, closeModal, item } : CardProjectProps)  => {
 
-    const badges = item.technology.map((element : TechnologyItem) => (
-        <Badge key={element.techno} variant="outline">
-            {element.techno}
-        </Badge>
-    ));
-
     const challenges = item.challenge.map((element : ChallengeItem) => (
         <li key={element.challenge}>{element.challenge}</li>
     ));
@@ -74,7 +68,7 @@ const ModalPage = ({ isOpen, closeModal, item } : CardProjectProps)  => {
           <div className="flex flex-col justify-center items-center modal-content bg-white p-6 rounded-md">
             <h2 className="text-4xl font-bold mb-4">{item.title}</h2>
             <Image className='mb-2 border-2 border-black' src={item.image} alt={item.alt} width={800} height={800}/>
-            <div>{badges}</div>
+            <UseBadge technologies={item.technology}/>
             <h2 className='text-2xl py-8'>Objectif</h2>
             <p className='w-full sm:w-[50rem] text-center text-gray-600'>{item.text}</p>
             <h2 className='text-2xl py-8'>Les difficultées rencontrées</h2>

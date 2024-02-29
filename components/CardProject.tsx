@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { FaGithub } from 'react-icons/fa';
 
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import {
     Card,
     CardContent,
@@ -15,6 +14,7 @@ import {
   } from "@/components/ui/card"
 import DrawerPage from './DrawerPage'
 import ModalPage from './ModalPage';
+import UseBadge from '@/custom/UseBadge';
 
 type TechnologyItem = {
     techno : string
@@ -57,12 +57,6 @@ const CardProject = (props: CardProjectProps) => {
         setModalIsOpen(false);
     };
     
-    const badges = props.item.technology.map((element : TechnologyItem) => (
-        <Badge key={element.techno} variant="outline">
-            {element.techno}
-        </Badge>
-    ));
-    
   return (
     <Card className={`w-[250px] sm:w-[330px] flex flex-col items-center ${modalIsOpen ? "" : "hover:scale-105 transition-transform"}`}>
         <CardHeader className='w-full border-b-2 border-black flex items-center p-0'>
@@ -71,7 +65,7 @@ const CardProject = (props: CardProjectProps) => {
         <CardContent className="flex flex-col items-center justify-center">
             <CardTitle className='text-2xl pb-4 md:text-4xl'>{props.item.title}</CardTitle>
             <CardDescription className='text-md pb-4 text-center'>{props.item.summarise}</CardDescription>
-            <div>{badges}</div>
+            <UseBadge technologies={props.item.technology}/>
         </CardContent>
         <CardFooter className='flex justify-between py-4'>
             <Button id="openModalBtn" className="hover:bg-black hover:text-white mx-2 hidden md:block" variant="outline" onClick={openModal}>

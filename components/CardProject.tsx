@@ -56,7 +56,7 @@ const CardProject = (props: CardProjectProps) => {
     const closeModal = () => {
         setModalIsOpen(false);
     };
-
+    
     const badges = props.item.technology.map((element : TechnologyItem) => (
         <Badge key={element.techno} variant="outline">
             {element.techno}
@@ -74,7 +74,7 @@ const CardProject = (props: CardProjectProps) => {
             <div>{badges}</div>
         </CardContent>
         <CardFooter className='flex justify-between py-4'>
-            <Button className="hover:bg-black hover:text-white mx-2 hidden md:block" variant="outline" onClick={openModal}>
+            <Button id="openModalBtn" className="hover:bg-black hover:text-white mx-2 hidden md:block" variant="outline" onClick={openModal}>
                 En savoir plus
             </Button>
             <ModalPage key={props.item.title} isOpen={modalIsOpen} closeModal={closeModal} item={props.item} />

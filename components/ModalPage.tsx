@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button } from './ui/button'
 import { Badge } from './ui/badge'
 
@@ -51,8 +51,26 @@ const ModalPage = ({ isOpen, closeModal, item } : CardProjectProps)  => {
         <li key={element.resolution}>{element.resolution}</li>
     ));
 
+    useEffect(() => {
+        const handleOutsideClick = (event: MouseEvent) => {
+        if (isOpen) {
+            if (event.target instanceof Element && event.target.id !== 'openModalBtn' && !event.target.closest('.modal-content')) {
+                closeModal();
+            }
+        }
+        };
+    
+        if (isOpen) {
+          window.addEventListener('click', handleOutsideClick);
+        }
+    
+        return () => {
+          window.removeEventListener('click', handleOutsideClick);
+        };
+      }, [isOpen, closeModal]);
+
     return (
-        <div className={`modal ${isOpen ? 'block' : 'hidden'} overflow-y-auto fixed inset-0 h-screen w-screen z-50 bg-black bg-opacity-50 flex items-center justify-center`}>
+        <div className={`modal ${isOpen ? 'flex' : 'hidden'} overflow-y-auto fixed inset-0 h-screen w-screen z-50 bg-black bg-opacity-50 flex items-center justify-center`}>
           <div className="flex flex-col justify-center items-center modal-content bg-white p-6 rounded-md">
             <h2 className="text-4xl font-bold mb-4">{item.title}</h2>
             <Image className='mb-2 border-2 border-black' src={item.image} alt={item.alt} width={800} height={800}/>

@@ -63,7 +63,7 @@ const CardProject = (props: CardProjectProps) => {
             <Image src={props.item.image} alt={props.item.alt} width={500} height={500}/> 
         </CardHeader>
         <CardContent className="flex flex-col items-center justify-center">
-            <CardTitle className='text-2xl pb-4 md:text-4xl'>{props.item.title}</CardTitle>
+            <CardTitle className='text-2xl text-center pb-4 md:text-4xl'>{props.item.title}</CardTitle>
             <CardDescription className='text-md pb-4 text-center'>{props.item.summarise}</CardDescription>
             <UseBadge technologies={props.item.technology}/>
         </CardContent>

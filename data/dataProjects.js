@@ -28,7 +28,7 @@ export default [
 
     {
         title: "PortFolio",
-        image: "/image/Portfolio_Jean-Jacques_Valmont.png",
+        image: "/image/Portfolio_Jean_Jacques_Valmont_picture_project.png",
         alt: "Picture site web",
         summarise: "Réalisation de mon portfolio responsive et accessible.",
         technology:[
@@ -54,15 +54,31 @@ export default [
     ],
     },
 
-    // {
-    //     title: "Project 3",
-    //     image: "/image/Vercel_logo.png",
-    //     alt: "Picture site web",
-    //     summarise: "Description text",
-    //     technology:[
-    //         {techno: "Techno 1"},
-    //         {techno: "Techno 2"},
-    //     ],
-    //     link:"http://localhost:3000/"
-    // }
+    {
+        title: "Near Faithful Reproduction",
+        image: "/image/Near_faithful_reproduction_picture_project.png",
+        alt: "Picture site web",
+        summarise: "Conception d'un jeu en ligne multijoueur de dessin accessible via navigateur.",
+        technology:[
+            {techno: "HTML5"},
+            {techno: "TailWind"},
+            {techno: "JavaScript"},
+            {techno: "Socket.io"},
+            {techno: "Docker"},
+            {techno: "DigitalOceans"},
+        ],
+        vercel:"http://178.128.163.194:3000/",
+        github:"https://github.com/Jean-JacquesValmont/NearFaithfulReproductionMulti",
+        text:"Ce projet avait pour but d'apprendre à utiliser une méthode de communication client-serveur en temps réel et de découvrir le contexte 2D pour la partie dessin.",
+        challenge:[
+            {challenge: "Mettre en place le contexte 2D en utilisant ces fonctionnalités pour le dessin."},
+            {challenge: "Comprendre et utiliser Socket.io pour la mise en place de la communication client-serveur."},
+            {challenge:"Création d'un fichier Dockerfile puis déploiement sur un droplet Docker avec DigitalOcean."}
+    ],
+        resolution:[
+            {resolution: "Tester les fonctionnalités sur un mini-projet avant de les implémenter sur le projet principal."},
+            {resolution: "Suivi de la documentation officielle et du tutoriel proposé sur Socket.io pour créer le serveur."},
+            {resolution: "Apprendre à créer un fichier Dockerfile et suivre un tutoriel pour le déploiement."}
+    ],
+    },
 ]

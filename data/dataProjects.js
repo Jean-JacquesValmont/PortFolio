@@ -58,7 +58,7 @@ export default [
         title: "Near Faithful Reproduction",
         image: "/image/Near_faithful_reproduction_picture_project.png",
         alt: "Picture site web",
-        summarise: "Conception d'un jeu en ligne multijoueur de dessin accessible via navigateur.",
+        summarise: "Conception d'un jeu en ligne multijoueurs de dessin accessible via navigateur.",
         technology:[
             {techno: "HTML5"},
             {techno: "TailWind"},
